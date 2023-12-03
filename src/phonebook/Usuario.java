@@ -9,27 +9,27 @@ package phonebook;
  * @author USUARIO
  */
 public class Usuario {
-    private int id;
+    private int id_user;
     private String username;
     private String password;
-    private String contactId;
+    
 
     public Usuario() {
     }
 
-    public Usuario(int id, String username, String password, String contactId) {
-        this.id = id;
+    public Usuario(int id, String username, String password) {
+        this.id_user = id_user;
         this.username = username;
         this.password = password;
-        this.contactId = contactId;
-    }
-    
-    public int getId() {
-        return id;
+        
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
     }
 
     public String getUsername() {
@@ -48,13 +48,6 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getContactId() {
-        return contactId;
-    }
-
-    public void setContactId(String contactId) {
-        this.contactId = contactId;
-    }
     
     
 }

@@ -13,10 +13,10 @@ public class ConnectionDB {
 
     public static Connection getConnectionBD() {
         Connection connection = null;
-        String db = "contactos_generales";
+        String db = "general_contacts";
         String url = "jdbc:mysql://localhost:3306/" + db;
         String user = "root";
-        String password = "";
+        String password = "1234";
 
         try {
             // Cargar el controlador de MySQL
@@ -26,7 +26,7 @@ public class ConnectionDB {
             connection = DriverManager.getConnection(url, user, password);
             
         } catch (SQLException | ClassNotFoundException e) {
-            JOptionPane.showMessageDialog(null, e, "Error en la conexión a la base de datos: " + e.getMessage(), JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e, "Error in the conection to DataBase " + e.getMessage(), JOptionPane.ERROR_MESSAGE);
             connection = null;
         }
 

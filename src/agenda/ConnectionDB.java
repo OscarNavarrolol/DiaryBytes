@@ -12,16 +12,16 @@ public class ConnectionDB {
 
     public static Connection getConnectionBD() {
         Connection connection = null;
-        String db = "contactos_generales";
+        String db = "general_contacts";
         String url = "jdbc:mysql://localhost:3306/" + db;
         String user = "root";
-        String password = "";
+        String password = "1234"; // password of workbecnh
 
         try {
-            // Cargar el controlador de MySQL
+            // Charge sql driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Establecer la conexión a la base de datos
+            // Connecetion to BD
             connection = DriverManager.getConnection(url, user, password);
             
         } catch (SQLException | ClassNotFoundException e) {
