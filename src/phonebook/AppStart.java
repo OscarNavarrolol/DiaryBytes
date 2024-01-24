@@ -26,8 +26,10 @@ public class AppStart extends javax.swing.JFrame {
     public AppStart() {
         initComponents();
         ConnectionDB.getConnectionBD();
-        ArrayList<Usuario> listaUsuarios = ArrayObjPassword();           
-
+        ArrayList<Usuario> listaUsuarios = ArrayObjPassword();
+        
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
 //        for (Usuario user : listaUsuarios){
 //            System.out.println("ID: " + user.getId());
 //            System.out.println("Username: " + user.getUsername());

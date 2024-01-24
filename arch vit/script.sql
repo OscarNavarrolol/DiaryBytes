@@ -35,21 +35,19 @@ INSERT INTO users (username, password_user) VALUES
 INSERT INTO contacts (name_contact, phone_number, address, email) VALUES 
 ('Contacto 1', '1234567890', '123 Calle Principal', 'contacto1@example.com'),
 ('Contacto 2', '9876543210', '456 Avenida Secundaria', 'contacto2@example.com'),
-('Contacto 3', '5551234567', '789 Carretera', 'contacto3@example.com');
+('Contacto 3', '5551234567', '789 Carretera', 'contacto3@example.com'),
+("Carlo umba","12312312","Calles caler","Rober@gmailc"),
+("Amber carlisa","231421","Calle el balta","amberhill@");
 
 -- Asignar contactos a usuarios existentes
 INSERT INTO user_contacts (id_contact, id_user) VALUES 
 (1, 1),  
 (2, 2),  
-(3, 3); 
+(3, 3),
+(4, 1),
+(5, 1); 
 
-
-
-
-
-
-
-
-
-
+select u.username, c.*
+from users as u, contacts as c,  user_contacts as uc
+where uc.id_contact = c.id_contact and uc.id_user = u.id_user and u.id_user = 1;
 

@@ -21,7 +21,8 @@ public class AppPrincipal extends javax.swing.JFrame {
 
     public AppPrincipal() {
         initComponents();
-
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
